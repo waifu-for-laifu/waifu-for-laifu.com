@@ -14,8 +14,12 @@
       <h1 class="h1" id="login-header"> Admin Login</h1>
       <div id="login-error-msg-holder">
         <p id="login-error-msg">
-          Invalid username
-          <span id="error-msg-second-line">and/or password</span>
+          Invalid username and/or password
+        </p>
+      </div>
+      <div id="login-error-msg-holderr">
+        <p id="login-error-msgg">
+          Enter Username And Password
         </p>
       </div>
       <form class="form1" id="login-form">
@@ -45,16 +49,21 @@
       const loginForm = document.getElementById("login-form");
       const loginButton = document.getElementById("login-form-submit");
       const loginErrorMsg = document.getElementById("login-error-msg");
+      const loginErrorMsgg = document.getElementById("login-error-msgg");
 
       loginButton.addEventListener("click", (e) => {
         e.preventDefault();
         const username = loginForm.username.value;
         const password = loginForm.password.value;
 
-        if (username === "admin" && password === "admin") {
-          open("69i59j0i512j69i57j0i512l2j69i59j0i512j0i10i395i424i466i512j0i512l2.5054j1j15&.html");
+        if (username === "1" && password === "1") {
+          location.assign("dlinks.html");
+          loginErrorMsgg.style.opacity = 1;
+          loginErrorMsg.style.opacity = 0;
         } else {
           loginErrorMsg.style.opacity = 1;
+          
+          loginErrorMsgg.style.opacity = 0;
         
 
         }
